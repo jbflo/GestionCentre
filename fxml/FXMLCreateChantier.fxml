@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+
+<StackPane id="stackpane" fx:id="stackPaneChantier" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="600.0" minWidth="800.0" prefHeight="800.0" prefWidth="1200.0" stylesheets="@style.css" StackPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLDocumentControllerCreateChantier">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label id="textRouge" text="Construction" textFill="#946565" />
+               </children>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                  <GridPane maxHeight="263.0" maxWidth="1005.0" minHeight="180.0" minWidth="600.0" prefHeight="263.0" prefWidth="1005.0" HBox.hgrow="ALWAYS">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Nom du Centre" />
+                        <Label text="Localisation" GridPane.rowIndex="1" />
+                        <Label text="Date de création" GridPane.rowIndex="5" />
+                        <Label text="Heure de création" GridPane.rowIndex="6" />
+                        <Label text="Actif" GridPane.rowIndex="7" />
+                        <CheckBox fx:id="check" mnemonicParsing="false" text="Actif" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <LocalTimePicker fx:id="localTime" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <DatePicker fx:id="dateCreate" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="textFieldLocalisation" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="textFieldName" GridPane.columnIndex="1" />
+                        <Label text="Niveau" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="comboTypologie" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="comboUsage" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Usage" GridPane.rowIndex="3" />
+                        <Label text="Commentaire" GridPane.rowIndex="4" />
+                        <TextField fx:id="textFieldEmprise" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/construire.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <StackPane id="stackPane" fx:id="stackPanePetit">
+               <children>
+                  <VBox>
+                     <children>
+                        <TextField fx:id="textFieldID" visible="false" />
+                        <HBox prefHeight="40.0" prefWidth="1200.0" spacing="30.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleClicEnregistrer" prefHeight="27.0" prefWidth="92.0" text="Enregistrer" />
+                              <Button mnemonicParsing="false" onAction="#handleClicSupprimer" prefHeight="27.0" prefWidth="87.0" text="Supprimer" />
+                              <Button id="boutonselect" mnemonicParsing="false" onAction="#handleCharger" text="Charger" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="3.0">
+                           <children>
+                              <Label text="Il ya au total" />
+                              <Label fx:id="nbreResult" text="0" />
+                              <Label text="centre(s)" />
+                           </children>
+                        </HBox>
+                        <TableView fx:id="tableView" prefHeight="354.0" prefWidth="1190.0" VBox.vgrow="ALWAYS">
+                          <columns>
+                              <TableColumn prefWidth="75.0" text="ID" />
+                            <TableColumn prefWidth="180.0" text="Nom du Centre" />
+                              <TableColumn prefWidth="144.0" text="Localisation" />
+                              <TableColumn prefWidth="171.0" text="Niveau" />
+                              <TableColumn prefWidth="133.0" text="Usage" />
+                              <TableColumn prefWidth="213.0" text="Commentaire" />
+                              <TableColumn prefWidth="179.0" text="Etape" />
+                              <TableColumn prefWidth="220.0" text="Date Création" />
+                              <TableColumn prefWidth="119.0" text="Actif" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+         <StackPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </StackPane.margin>
+      </VBox>
+   </children>
+</StackPane>

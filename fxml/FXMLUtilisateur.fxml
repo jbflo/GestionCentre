@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane id="stackpane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="600.0" minWidth="800.0" prefHeight="800.0" prefWidth="1200.0" stylesheets="@style.css" StackPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLDocumentControllerUtilisateur">
+    <children>
+        <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+            <children>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label id="textRouge" text="Utilisateur" />
+                    </children>
+                </HBox>
+                <HBox spacing="20.0">
+                    <children>
+                        <GridPane maxHeight="487.0" maxWidth="1003.0" minHeight="180.0" minWidth="600.0" prefHeight="487.0" prefWidth="1003.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label text="Grade" />
+                           
+                                <Label text="Prenom" GridPane.rowIndex="2" />
+                                <Label text="Nom" GridPane.rowIndex="1" />
+                             
+                                <Label text="Login" GridPane.rowIndex="3" />
+                                <TextField fx:id="textFieldNom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <TextField fx:id="textFieldPrenom" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <TextField fx:id="textFieldLogin" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                <Label text="Mot de passe" GridPane.rowIndex="4" />
+                                <Label text="Confirmer mot de passe" GridPane.rowIndex="5" />
+                                <PasswordField fx:id="textFieldPass" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                <PasswordField fx:id="textFieldPassConfirm" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                <ComboBox fx:id="comboBoxGrade" prefWidth="150.0" promptText="Administrateur" GridPane.columnIndex="1" />
+                               
+                            </children>
+                        </GridPane>
+                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/user.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox prefHeight="40.0" prefWidth="1200.0" spacing="30.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#handleClicEnregistrer" text="Enregistrer" />
+                        <Button mnemonicParsing="false" onAction="#handleClicModifier" prefHeight="27.0" prefWidth="90.0" text="Modifier" />
+                        <Button mnemonicParsing="false" onAction="#handleClicSupprimer" prefHeight="27.0" prefWidth="87.0" text="Supprimer" />
+                    </children>
+                </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="3.0">
+               <children>
+                  <Label text="Il ya au total" />
+                  <Label fx:id="nbreResult" text="0" />
+                  <Label text="utilisateur(s)" />
+               </children>
+            </HBox>
+                <TableView fx:id="tableView" prefHeight="571.0" prefWidth="1200.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn prefWidth="238.0" text="Nom " />
+                        <TableColumn minWidth="0.0" prefWidth="455.0" text="Prénom" />
+                        <TableColumn prefWidth="278.0" text="Login" />
+                  <TableColumn minWidth="0.0" prefWidth="218.0" text="Grade" />
+                    </columns>
+                </TableView>
+            </children>
+            <StackPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </StackPane.margin>
+        </VBox>
+    </children>
+</StackPane>

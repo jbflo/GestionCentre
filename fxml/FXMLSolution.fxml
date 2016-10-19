@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.scene.layout.*?>
+<?import intfield.*?>
+<?import jfxtras.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+
+<StackPane id="stackpane" maxHeight="600.0" maxWidth="1200.0" minHeight="400.0" minWidth="400.0" prefHeight="600.0" prefWidth="1200.0" stylesheets="@style.css" StackPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLDocumentControllerCreateChantier">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label id="textRouge" text="Solutions" textFill="#946565" />
+               </children>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                  <GridPane maxHeight="263.0" maxWidth="1005.0" minHeight="180.0" minWidth="600.0" prefHeight="263.0" prefWidth="1005.0" HBox.hgrow="ALWAYS">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Nom solution" />
+                        <Label text="Principe" GridPane.rowIndex="1" />
+                        <TextField fx:id="textFieldSolution" GridPane.columnIndex="1" />
+                        <TextArea fx:id="textAreaSolution" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/solution.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <StackPane id="stackPane" fx:id="stackPanePetit">
+               <children>
+                  <VBox>
+                     <children>
+                        <HBox prefHeight="40.0" prefWidth="1200.0" spacing="30.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleClicEnregistreSolution" prefHeight="27.0" prefWidth="92.0" text="Enregistrer" />
+                              <Button mnemonicParsing="false" onAction="#handleClicSupprimerSolution" prefHeight="27.0" prefWidth="87.0" text="Supprimer" />
+                              <Button id="boutonselect" mnemonicParsing="false" onAction="#handleClicEnregistrerProcedure" text="Enregistrer procédure" />
+                              <Button id="boutonselect" mnemonicParsing="false" onAction="#handleClicSupprimerProcedure" text="Supprimer procédure" />
+                              <Label text="Numéro" />
+                              <IntField fx:id="textFieldNumero" editable="false" />
+                              <Label text="Contenu" />
+                              <TextArea fx:id="textAreaProcedure" prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="3.0">
+                           <children>
+                              <Label text="Il ya au total" />
+                              <Label fx:id="nbreResultSolution" text="0" />
+                              <Label text="solutions(s)" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <TableView fx:id="tableViewSolution" onMouseClicked="#handleclicTableView" prefHeight="96.0" prefWidth="833.0" VBox.vgrow="ALWAYS">
+                                <columns>
+                                    <TableColumn prefWidth="126.0" text="Identifiant" />
+                                  <TableColumn prefWidth="163.0" text="Nom solution" />
+                                    <TableColumn prefWidth="608.0" text="Libellé" />
+                                </columns>
+                                   </TableView>
+                              <TableView fx:id="tableViewProcedure" prefHeight="354.0" prefWidth="584.0" HBox.hgrow="ALWAYS">
+                                <columns>
+                                    <TableColumn prefWidth="103.0" text="Identifiant" />
+                                  <TableColumn prefWidth="78.0" text="Numéro" />
+                                  <TableColumn prefWidth="284.0" text="Contenu" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+            <HBox alignment="CENTER">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleAnnulerSolution" text="Annuler" />
+               </children>
+            </HBox>
+         </children>
+         <StackPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </StackPane.margin>
+      </VBox>
+   </children>
+</StackPane>

@@ -1,0 +1,333 @@
+/* 
+    Document   : Login
+    Created on : 20 Sep. 2016, 09:51:40
+    Author     : JBFLO & Ginel
+    Description: CSS page of the app
+        Purpose of the stylesheet follows.
+*/
+
+root {
+    display: block;
+}
+.root {
+-fx-background-image: url("background.jpg");
+}
+
+#textRouge{
+    -fx-text-fill: #1b485f;
+    -fx-font-size: 30px;
+}
+
+#menu { 
+
+
+    -fx-background-color: #f2f2f2;
+}
+#dialog { 
+
+
+    -fx-background-color: #c5e3ff;
+}
+#dialogback { 
+    -fx-background-color: #d0ceea;
+}
+#stackpane { 
+
+    -fx-background-size: stretch;
+    /*  -fx-background-image: url("../images/backbulles.jpg");*/
+    -fx-background-color: #f2f2f2;
+}
+#stackpane1 { 
+
+    -fx-background-color: #ffffff;
+
+
+}
+#circle{
+    -fx-background-color:#333333;
+
+}
+#morceau{
+    -fx-background-color:#c5e3ff;
+
+}
+
+#buttonRouge {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#1b485f, #1f536d);
+    -fx-font-size: 15px;
+    -fx-background-radius: 0;
+
+
+}
+#buttonRouge:hover{
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-background-radius: 0;
+    -fx-background-color: linear-gradient(#2a6f92,#3184ae);
+}
+.label{
+    -fx-font-size: 15px;
+
+    -fx-text-fill: #0D1526;
+
+}
+.menu:showing{
+    -fx-background-color:#edf6f7;
+}
+.menu:hover{
+    -fx-background-color:#edf6f7;
+}
+
+.menu-item:focus{
+    -fx-background-color:#edf6f7;
+}
+.menu-item:pressed{
+    -fx-background-color:#edf6f7;
+}
+.menu-item:focused{
+    -fx-background-color:#edf6f7;
+}
+.menu-item:selected{
+    -fx-background-color:#edf6f7;
+}
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#1c4a62, #1c4a62);
+    -fx-font-size: 15px;
+    -fx-background-radius: 0;
+
+
+}
+
+.textfield {
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+}
+.combobox {
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+}
+.hyperlink:disabled{
+    -fx-fill: black;
+}
+.button:hover{
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-background-radius: 0;
+    -fx-background-color: linear-gradient(#276788,#276788);
+}
+#welcome-text {
+    -fx-font-size: 32px;
+    -fx-font-family: "Arial Black";
+    -fx-text-fill: #818181;
+
+}
+#labelBlue{
+    -fx-text-fill:#5b7c98;
+}
+#bouton {
+    -fx-background-color:#5b7c98; 
+    -fx-text-fill: white;
+
+}
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.menubutton {
+    -fx-background-color:#5b7c98; 
+
+}
+#boutonselect {
+    -fx-background-color:#e7831f; 
+
+}
+#boutonselect:hover {
+    -fx-background-color:#e7be1e; 
+
+}
+#text-text {
+    -fx-font-size: 15px;
+    -fx-font-family: "Arial Black";
+    -fx-fill: #818181;
+
+}
+#actiontarget {
+    -fx-fill: FIREBRICK;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );  
+}
+
+#grishgrow{
+    -fx-background-color:#cccccc;
+
+}
+#borderRoot{
+
+}
+#text-InfoEntete {
+    -fx-font-size: 12px;
+    -fx-font-family: "Arial,Helvetica,sans-serif";
+    -fx-text-fill: #555555;
+    -fx-underline: false;
+    -fx-border-width: 0;
+
+    outline: none;
+
+}
+#text-InfoEnteteBlue {
+    -fx-font-size: 16px;
+    -fx-font-family: "Arial,Helvetica,sans-serif";
+    -fx-text-fill: #0D1526;
+    -fx-underline: false;
+    -fx-border-width: 0;
+
+    outline: none;
+
+}
+
+#text-InfoEnteteBlack {
+    -fx-font-size: 16px;
+    -fx-font-family: "Arial,Helvetica,sans-serif";
+    -fx-text-fill: #333333;
+    -fx-underline: false;
+    -fx-border-width: 0;
+    outline: none;
+
+}
+#text-InfoEnteteGros {
+    -fx-font-size: 30px;
+    -fx-font-family: "Arial,Helvetica,sans-serif";
+    -fx-text-fill: grey;
+    -fx-underline: false;
+    -fx-border-width: 0;
+
+    outline: none;
+
+}
+
+#text-InfoEnteteGrosGreen {
+    -fx-font-size: 30px;
+    -fx-font-family: "Arial,Helvetica,sans-serif";
+    -fx-text-fill: #000000;
+    -fx-underline: false;
+    -fx-border-width: 0;
+    outline: none;
+
+}
+#text-InfoEntetePetitCopy {
+    -fx-font-size: 20px;
+    -fx-font-family: "Arial,Helvetica,sans-serif";
+    -fx-text-fill: #000000;
+    -fx-underline: false;
+    -fx-border-width: 0;
+    outline: none;
+
+}
+#text-normal-norm{
+    -fx-text-fill: #6387A6;
+}
+#messageerror{
+    -fx-text-fill: #990033;
+}
+#jaunelabel{
+    -fx-text-fill: #000000;
+}
+#text-InfoEntetePetittitrecuves {
+    -fx-font-size: 15px;
+    -fx-font-family: "Arial,Helvetica,sans-serif";
+    -fx-text-fill: black;
+    -fx-underline: false;
+    -fx-border-width: 0;
+    outline: none;
+
+}
+#arrondi {
+    -fx-background-color: #ecf5f7;
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+
+
+}
+#arrondifond {
+    -fx-background-color: #6387A6;
+}
+#separator {
+    -fx-background-color: #ffffff;
+
+
+
+}
+
+#text-InfoPercent {
+    -fx-font-size: 12px;
+    -fx-font-family: "Arial,Helvetica,sans-serif";
+    -fx-text-fill: #ffffff;
+    -fx-underline: false;
+    -fx-font-weight: bold;
+    -fx-border-width: 0;
+    outline: none;
+}
+#bande_bleue{
+    -fx-background-color: #6387A6;
+}
+#arrondistations {
+
+    -fx-background-color: #c5e3ff;
+    -fx-border-width: 0;
+    -fx-border-color: #c5e3ff;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+
+}
+
+#arrondistation {
+
+    -fx-background-color: #ffffff;
+    -fx-border-width: 1;
+    -fx-border-color: #333333;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+
+
+
+}
+#text-normal {
+    -fx-font-size: 15px;
+    -fx-font-family:"Courier New"  ;
+    -fx-text-fill: #000000;
+
+
+
+}
+
+#labelBold{
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+
+
+}
+#percent{
+    -fx-background-color: linear-gradient(#6387A6, #6387A6);
+    -fx-text-fill:#ffffff;
+
+}
+
+#username{
+
+    -fx-text-fill:#ffffff;
+
+}
